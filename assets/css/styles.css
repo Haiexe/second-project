@@ -17,6 +17,25 @@ body {
 }
 
 /* Common */
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp,1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2{
+    --line-clamp:2;
+}
+
+.heading {
+    font-family: var(--font-heading);
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
 a {
     text-decoration: none;
 }
@@ -108,6 +127,7 @@ a {
 
 /* ========================Hero======================== */
 .hero {
+    padding-bottom: 65px;
     padding-top: 56px;
     background-color: #FFFCF4;;
 }
@@ -126,6 +146,8 @@ a {
     height: 685px;
     object-fit: cover;
     border-radius: 20px;
+    display: block;
+    /* mt cai chan  */
 }
 
 .hero .body .media-block .hero-summary {
@@ -136,11 +158,12 @@ a {
     bottom: 48px;
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
-    padding: 28px 24px;
+    padding: 24px;
 }
 
 .hero .body .media-block .hero-summary .item {
     display: flex;
+    align-items: center;
 }
 
 .hero .body .media-block .hero-summary .item + .item {
@@ -183,17 +206,12 @@ a {
 
 .hero .body .content-block  {
     width: 52%;
-    padding: 50px 0 0 120px;
+    padding: 50px 0 0 130px;
 }
 
-.hero .body .content-block .heading {
-    font-family: var(--font-heading);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 58px;
-    line-height: 68px;
-    letter-spacing: -0.02em;
-    color: #171100;
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17;
 }
 
 .hero .body .content-block .desc {
@@ -262,4 +280,138 @@ a {
     font-size: 4.4rem;
     line-height: 1.23;
     color: #171100;
+}
+
+/* ========================Popular======================== */
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular .heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26;
+}
+
+.popular-top .desc {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5F5B53;
+    margin-top: 16px;
+    width: 458px;
+}
+
+.popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-top .controls{
+    display: flex;
+    gap: 18px;
+}
+
+.popular-top .control-btn {
+    color: var(--primary-color);
+    border-radius: 999px;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popular-top .control-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.popular .course-list {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+
+.popular .course-item {
+    /* cho kich thc bang nhau */
+    flex: 1;
+    background: #FFFFFF;
+    border: 1px solid #E2DFDA;
+    border-radius: 12px;
+    
+}
+
+.popular .course-item .thumb {
+    width: calc(100% + 1px);
+    border-radius: 12px 12px 0px 0px;
+    height: 278px;
+    object-fit: contain;
+    margin: -10px 0px 0;
+}
+ 
+.course-list .info {
+    padding: 16px 22px 22px;
+}
+
+.course-item .info .foot,
+.course-list .info .head .rating,
+.course-list .info .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.course-list .info .head .title a {
+    padding-right: 6px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.course-list .info .head .rating .value {
+    margin-left: 6px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #FEA31B;
+}
+
+.course-item .info .desc {
+    margin-top: 6px;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5F5B53;
+
+}
+
+.course-item .info .foot {
+    margin-top: 12px;
+
+}
+
+.course-item .info .foot .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+
+}
+
+.popular .course-item .book-btn{
+    border: none;
+}
+
+.course-item .info .foot .btn:hover{
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.course-item:hover{
+    border-color: transparent;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
 }
