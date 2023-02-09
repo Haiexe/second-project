@@ -718,6 +718,18 @@ a {
     padding-right: 15px;
 }
 
+.footer .footer-top .head-noUnderline .footer-head::after{
+    display: inline-block;
+    content: "";
+    height: 4px;
+    width: 4px;
+    background-color: var(--primary-color);
+    border-radius: 99px;
+    position: relative;
+    top: 1px;
+    right: -1px;
+}
+
 .footer .footer-top .head-noUnderline .social .social-icon {
     margin-right: 18px;
 }
